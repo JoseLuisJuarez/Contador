@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="jose.com.sistemas.contador.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom|center_horizontal">
+
+        <Button
+            android:text="Resetear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/resetea"
+            android:onClick="reseteaContador" />
+
+        <EditText
+            android:layout_width="62dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:ems="10"
+            android:id="@+id/n_reseteo"
+            android:gravity="center_vertical|center_horizontal"
+            android:hint="0"
+            android:inputType="numberSigned"
+            android:cursorVisible="false" />
+
+        <CheckBox
+            android:text="Conteo Negativo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/negativos"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical|center">
+
+        <Button
+            android:text="-"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/resetea"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/decrementa"
+            android:onClick="restaContador"
+            android:textSize="70dp" />
+
+        <android.support.v4.widget.Space
+            android:layout_width="50dp"
+            android:layout_height="0dp" />
+
+        <Button
+            android:text="+"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/incrementa"
+            android:layout_above="@+id/resetea"
+            android:layout_centerHorizontal="true"
+            android:onClick="incrementaContador"
+            android:textSize="70dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:text="Contador: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/tituloTexto" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tituloTexto"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/contadorTexto"
+            android:textSize="56dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>
