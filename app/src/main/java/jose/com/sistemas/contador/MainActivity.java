@@ -40,9 +40,7 @@ public class MainActivity extends Activity {
             CheckBox negativos=(CheckBox)findViewById(R.id.negativos);
 
             if (!negativos.isChecked()){
-
                 contador=0;
-
             }
 
         }
